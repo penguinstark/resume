@@ -1,0 +1,347 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands 
+
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{0.5mm} \item[]
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} & \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[2]{
+\vspace{0.5mm}\item[]
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        % \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#1}} & \footnotesize{\textit{#2}}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Kaushik Karthik Prasanna} % Your Name
+\newcommand{\course}{Computer Engineering and Math Student}% Your Program} % Your Program
+% \newcommand{\roll}{xxxxxxx} % Your Roll No.
+\newcommand{\phone}{732-593-7693} % Your Phone Number
+% \newcommand{\emaila}{youremail@gmail.com} %Email 1
+\newcommand{\emailb}{kaushikkarthikp@gmail.com} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr} \selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=1.5cm,clip]{logo.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +1-\phone}\\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {} &  \href{http://github.com/penguinstark}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub}} \quad \href{https://www.linkedin.com/in/kaushik-karthik-prasanna-b3b954191/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn}} \\
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Rutgers University, New Brunswick}{New Brunswick, NJ}
+      {Computer Engineering (SoE), Mathematics (SAS)}{2020-2023}
+    \vspace{-2.0mm}
+    \resumeItemListStart
+        \item {Dean's List recipient, International Computer Science and Engineering Society (ICSES).}
+        \item {Data Science Club, IEEE (robotics division), Head of Technology at JPS eSports, JPS Robotics}
+    \resumeItemListEnd
+    \vspace{-3.0mm}
+    
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Edison Board of Education}{Edison, NJ}
+      {Information Technology Intern}{June 2019 - August 2019}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Configured MDM software to ensure secure analysis and remote management of over 17,000 devices.}
+    \item {Applied knowledge of databases, electronics diagnosis/repair, and OS, including command line operations.}
+    \item{Assembled Dell EMC Windows Servers for district-wide data processing programs and securing user data.}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {Collaborative Solutions, LLC}{Remote [New Brunswick, NJ]}
+      {Data Analyst Extern}{September 2021 - January 2022}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Analyzed hundreds of railroad/highway grade crossings across the US to research accident trends.}
+    \item {Applied prior information about factors such as geography, wealth distribution, and accessibility.}
+    \item{Used GIS data models and Microsoft Excel to manipulate data and produce safety recommendations.}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Deep Learning and Computer Vision}{\textit{TensorFlow, openCV, COCO, Mask R-CNN, TPU}}{Real-Time Object Detection and Classification}{} %Event Dates
+      \vspace{-3.0mm}
+
+      \resumeItemListStart
+        \item {Developed an instance segmentation model using the COCO dataset, consisting of 300k+ images and 80 classes.}
+        \item {Leveraged Meta AI's Segment Anything and Mask R-CNN models using Google TPUs for accelerated training.}
+        
+    \resumeItemListEnd
+    \vspace{-5mm}
+
+    \resumeProject
+      {Dog Breed Classification using Deep Learning} %Project Name
+      {deep learning, CNN, vision transformers (ViT), Keras, Python} %Details
+      \vspace{-3.0mm}
+
+      \resumeItemListStart
+        \item {Trained a CNN using Stanford Dogs dataset, consisting of 20,000+ labeled images and 120 unique breeds.}
+        \item {Applied the ResNet50 and InceptionV3 models to achieve >90\% accuracy through transfer learning.}
+    \resumeItemListEnd
+    \vspace{-5mm}
+
+    \resumeSubheading
+      {Linux, Servers, and Networking}{\textit{Linux, network server, MariaDB, IoT, MySQL}}{Raspberry Pi Docker Container}{} %Event Dates
+      \vspace{-3.0mm}
+
+      \resumeItemListStart
+        \item {Deployed and manage low-resource intensive server-side applications, including homeassistant (IoT/smart home control), Nextcloud (self-hosted cloud storage), Plex (music server), and Pi-Hole (network-wide DNS adblocking).}
+        
+    \resumeItemListEnd
+    \vspace{-5mm}
+
+    \resumeProject
+      {\textsc{PiGPT} (AI voice assistant on Raspberry Pi)}%Project Name
+      {openAI, NLP, Google Cloud, AWS, Python, API} %Details
+      \vspace{-3.0mm}
+
+      \resumeItemListStart
+        \item {Choose one of 4 fine-tuneable models from OpenAI API, turning any speaker/mic into a RPi voice assisntant }
+        \item {Implemented Google Text-to-Speech Recognition/Azure for Speech-to-Text and Google TTS.}
+    \resumeItemListEnd
+    \vspace{-5mm}
+    
+    \resumeSubheading
+      {Software Engineering}{\textit{Java, image processing, API, breadth first search (BFS), datasets}}{Atomic Nature of Matter}{} %Event Dates
+      \vspace{-3.0mm}
+
+      \resumeItemListStart
+        \item {Analyzes image datasets to identify and track atomic particles in motion based on pixel density.}
+        \item {Finds mass of particles and relative distances using breadth first search, all while in motion.}
+    
+    \resumeItemListEnd
+    \vspace{-5mm}
+
+    \resumeProject
+      {\textsc{YelpHelp!} (Python App)} %Project Name
+      {Python, API, requirements engineering, Scrum, databases} %Details
+      \vspace{-3.0mm}
+
+      \resumeItemListStart
+        \item {Utilizes Yelp API to access popularity and safety data, producing ideal locations in a given radius.}
+        \item {Implemented using Scrum with thorough documentation: requirements, architecture, tests, evaluation.}
+    \resumeItemListEnd
+    \vspace{-5mm}
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \item{
+     \textbf{Languages}{: Python, Java, MATLAB, C/C++, LaTeX, JavaScript, RISC-V} \\
+     \textbf{Tools and Software}{: Linux, Git, MS Office (Excel, Word, PPT), Intel Quartus, LTspice, Docker} \\
+     % \textbf{Frameworks}{: } \\
+     % \textbf{Cloud/Databases}{: } \\
+     \textbf{Skills}{: Networking, Electronics Repair (smartphones, laptops), Cloud (AWS, GCP)}, OS (Win/Mac/Linux) \\
+     % \textbf{Coursework}{: } \\
+     \textbf{Areas of Interest}{: ML/AI, Deep Learning, Hardware/Robotics, Data Science, Blockchain/Cryptography} \\
+    }
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Relevant Coursework}}
+\vspace{-0.4mm}
+
+\begin{multicols}{3}
+Cryptography/Network Security
+Computer Arch./Assembly Lang.\\
+\columnbreak
+Data Structures and Algorithms
+Intro to Deep Learning (ML/AI) \\
+\columnbreak
+    Digital System Design \\
+    Quantum Comp. Algorithms
+\end{multicols}
+
+% \resumeSubHeadingListStart
+% \resumePOR{Position, } % Position
+%     {Club or Event} %Club,Event
+%     {Position tenure} %Tenure Period
+% \resumePOR{Position, } % Position
+%     {Club or Event} %Club,Event
+%     {Position tenure} %Tenure Period
+% \resumeSubHeadingListEnd
+% \vspace{-5mm}
+
+
+
+
+% %-----------Achievements-----------------
+% \section{\textbf{Achievements}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{Achievement } % Award
+%     {description} % Event
+%     {Event dates} %Event Year
+    
+% \resumePOR{Achievement } % Award
+%     {description} % Event
+%     {Event dates} %Event Year
+% \resumeSubHeadingListEnd
+% \vspace{-5mm}
+
+
+
+% %-------------------------------------------
+\end{document}
